@@ -1,0 +1,143 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdf8f2; /* Fondo crema muy claro */
+    color: #6b4c2b; /* Marrón medio claro */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: #b28958; /* Marrón claro, tono arena */
+    color: #fff8e7; /* Crema claro */
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(178, 137, 88, 0.4);
+}
+
+header h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-weight: 600;
+    color: #fff8e7; /* Texto claro */
+}
+
+nav ul li {
+    position: relative;
+    cursor: pointer;
+    padding: 8px 10px;
+    transition: background-color 0.3s ease;
+    color: #fff8e7;
+}
+
+nav ul li:hover {
+    background-color: #d3b483; /* Marrón claro más suave */
+    border-radius: 5px;
+    color: #5a3e1b; /* Texto marrón oscuro al hover */
+}
+
+/* Submenú desplegable */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #f9f4ec; /* Fondo crema muy claro */
+    padding: 10px 0;
+    border-radius: 5px;
+    min-width: 220px;
+    z-index: 1000;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(178, 137, 88, 0.3);
+}
+
+nav ul li:hover > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li ul li {
+    padding: 8px 15px;
+    white-space: nowrap;
+    color: #6b4c2b; /* Marrón medio */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li ul li:hover {
+    background-color: #b28958; /* Marrón claro */
+    color: #fff8e7; /* Texto crema claro */
+}
+
+/* Main content */
+main div {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff9f4; /* Fondo crema */
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(178, 137, 88, 0.15);
+}
+
+/* Títulos h2 */
+h2 {
+    color: #b28958; /* Marrón claro */
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #d3b483; /* Marrón más claro */
+    padding-bottom: 8px;
+}
+
+/* Párrafos dentro de ul (recomendable cambiarlos por div o p fuera del ul, pero mantengo tu estructura) */
+ul > p {
+    margin-bottom: 15px;
+    color: #8c6e4a;
+    font-style: italic;
+}
+
+/* Listas */
+ul {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    line-height: 1.4;
+    color: #6b4c2b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    nav ul li ul {
+        position: static;
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        display: none !important;
+    }
+    nav ul li:hover > ul {
+        display: none !important;
+    }
+}

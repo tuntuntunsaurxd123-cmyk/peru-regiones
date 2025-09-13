@@ -1,0 +1,80 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0e8f5; /* Color suave lilac para dar un toque elegante */
+    color: #3a2f4b;
+    padding: 40px 20px;
+}
+
+header {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffffcc; /* Fondo blanco semi-transparente */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(58, 47, 75, 0.2);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #5d4a8a;
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* Contenedor para párrafos e imágenes */
+.señor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Párrafos */
+.señor p {
+    width: 100%;
+    max-width: 850px;
+    margin-bottom: 20px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #4a3d70;
+    text-align: justify;
+}
+
+/* Estilo para las imágenes */
+.señor img {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(93, 74, 138, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.señor img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive para móvil */
+@media (max-width: 700px) {
+    .señor {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .señor img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+    }
+}
